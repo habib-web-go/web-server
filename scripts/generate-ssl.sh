@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Set default values for output files
-DEFAULT_OUT="../ssl/bundle.crt"
-DEFAULT_KEYOUT="../ssl/private.key"
+PREVIOUS_FOLDER="$(dirname "$(dirname "$(realpath "$0")")")"
+DEFAULT_OUT="$PREVIOUS_FOLDER/ssl/bundle.crt"
+DEFAULT_KEYOUT="$PREVIOUS_FOLDER/ssl/private.key"
 
 # Parse command line arguments
 while [[ $# -gt 0 ]]
